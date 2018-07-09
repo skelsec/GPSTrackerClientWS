@@ -222,7 +222,7 @@ class GPSTracker:
 		while True:
 			if self.ws:
 				for filename in glob.glob(self.backupdir + '*'):
-					with open(filename, 'rb') as f:
+					with open(filename, 'r') as f:
 						data = json.load(f)
 					try:
 						await self.ws.send(json.dumps(data))
