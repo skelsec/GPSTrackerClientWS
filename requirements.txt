@@ -1,4 +1,5 @@
 aiogps
+websockets
 aiohttp
 dateutils
 

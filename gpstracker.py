@@ -4,7 +4,6 @@ import json
 import logging
 import logging.config
 import platform
-import websockets
 import asyncio
 import ssl
 import datetime
@@ -16,6 +15,7 @@ import os
 from constants import tracker_config, logformat
 
 from dateutil.parser import parse
+import websockets
 import aiohttp
 from aiogps import gps, client
 
