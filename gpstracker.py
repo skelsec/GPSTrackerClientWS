@@ -260,7 +260,7 @@ class GPSTracker:
 					jdata = json.dumps(GPSTrackerData(self.client_info ,GPSPosition(data)).to_dict(), cls=UniversalEncoder)
 
 					try:
-						with open(self.datafile,'wb') as f:
+						with open(self.datafile,'ab') as f:
 							f.write(jdata.encode() + b'\r\n')
 					except:
 						logging.exception('Failed to write file!')
