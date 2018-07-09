@@ -1,0 +1,17 @@
+[Unit]
+Description=GPS Tracker
+After=syslog.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/opt/gpstracker/
+ExecStart=/opt/gpstracker/gpstracker.py
+StandardOutput=syslog
+StandardError=syslog
+Restart=always
+
+
+[Install]
+WantedBy=multi-user.target
